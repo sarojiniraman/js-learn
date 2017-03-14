@@ -3,10 +3,10 @@ var modularPattern = (function () {
   var countPrivateVar, displayPrivateMethod;
  
   // A private counter variable
-  countPrivateVar = 0;
+  _countPrivateVar = 0;
  
   // A private function which logs counter variable
-  displayPrivateMethod = function() {
+  _displayPrivateMethod = function() {
       console.log( countPrivateVar );
   };
  
@@ -19,9 +19,11 @@ var modularPattern = (function () {
       countPrivateVar++;
  
       // Call our private method
-      myPrivateMethod();
+      _displayPrivateMethod();
  
     }
   };
  
 })();
+
+modularPattern.publicFunction();
